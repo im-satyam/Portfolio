@@ -1,15 +1,12 @@
 import { motion } from "framer-motion";
-
 const About = () => {
   return (
     <div
-      className="relative h-[40rem] w-full bg-cover bg-center"
-      style={{ backgroundImage: "url('/7U5y.gif')" }}
+      className="relative h-[40rem] w-full bg-black bg-center"
+     
       id="about"
     >
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black opacity-70 z-0" />
-
+  
       {/* Content with semi-transparent dark background for better text readability */}
       <div className="absolute inset-0 flex items-center justify-center z-10 px-8 max-w-4xl mx-auto text-center">
         <motion.div

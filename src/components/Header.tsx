@@ -40,7 +40,7 @@ const Header = () => {
           </li>
           <li className="opacity-80 hover:opacity-100 transition">
             <a
-              href="https://linkedin.com/in/your-profile"
+              href="https://www.linkedin.com/in/satyam-kumar-6723a22a8/"
               target="_blank"
               rel="noopener noreferrer"
             >
