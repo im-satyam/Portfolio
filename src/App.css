@@ -1,0 +1,4 @@
+/* slower blinking cursor */
+.slower-blink > span {
+  animation-duration: 1.5s !important; /* default is about 0.7s */
+}

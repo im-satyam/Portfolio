@@ -1,0 +1,10 @@
+
+@import "tailwindcss";
+
+/* Slow down the blinking cursor animation */
+.Typewriter__cursor {
+  animation-duration: 1.5s !important; /* slower blink */
+}
+html {
+  scroll-behavior: smooth;
+}
