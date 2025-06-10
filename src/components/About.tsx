@@ -1,20 +1,19 @@
 import { motion } from "framer-motion";
+
 const About = () => {
   return (
     <div
       className="relative h-[40rem] w-full bg-black bg-center"
-     
       id="about"
     >
-  
       {/* Content with semi-transparent dark background for better text readability */}
       <div className="absolute inset-0 flex items-center justify-center z-10 px-8 max-w-4xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="bg-black bg-opacity-60 rounded-lg p-8"
-          style={{ backdropFilter: 'blur(6px)' }} // Optional: adds subtle blur behind box
+          className="bg-black bg-opacity-70 rounded-lg p-8"
+          style={{ backdropFilter: 'blur(6px)' }}
         >
           <motion.h1
             initial={{ opacity: 0, y: -20 }}
@@ -30,8 +29,8 @@ const About = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, delay: 0.3 }}
-            className="text-lg leading-relaxed text-gray-100"
-            style={{ textShadow: '0 0 6px rgba(0,0,0,0.7)' }}
+            className="text-lg leading-relaxed text-gray-300"
+            style={{ textShadow: '0 0 2px rgba(0,0,0,0.5)' }}
           >
             Hi! I’m <strong className="text-white">Satyam Kumar</strong>, a passionate Full Stack Developer and a Computer Science undergraduate specializing in Cyber Security, currently pursuing my B.E. and set to graduate in 2027. My journey in tech is driven by curiosity, creativity, and a strong desire to build solutions that make a meaningful impact.
             <br /><br />

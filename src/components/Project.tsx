@@ -33,11 +33,21 @@ const projects: Project[] = [
     technologies: ["React", "Bootstrap", "Firebase", "Firestore", "Firebase Authentication", "Firebase Hosting"],
     githubUrl: "https://github.com/im-satyam/book-buy-sell",
   },
+  {
+    title: "Ecommerce Website",
+    description: "Developed a full-featured e-commerce website using Flask for the backend, MySQL for database management, and TypeScript for building interactive and type-safe front-end components. The application includes user authentication, product listings, a shopping cart, and order processing functionality. Implemented RESTful routing, secure session handling, and password hashing to ensure robust security and scalability. Followed best practices in modular application structure and database design to create a maintainable and efficient web platform.",
+    technologies: ["React", "Typescript", "Flask", "MySQL", "Bootstrap", "RESTful APIs", "User Authentication", "E-commerce"],
+    githubUrl: "https://github.com/im-satyam/ea",
+  },
 ];
 
 const Project = () => {
   return (
-    <div id="projects" className="min-h-screen bg-black text-white p-8">
+    <div
+      id="projects"
+      className="min-h-screen bg-black text-white p-8"
+      style={{ scrollMarginTop: '5rem' }} // Add this line to fix the heading cut-off
+    >
       <h1 className="text-4xl font-bold mb-8 text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600">
         My Projects
       </h1>
@@ -87,4 +97,4 @@ const Project = () => {
   );
 };
 
-export default Project;  
+export default Project;

@@ -66,7 +66,7 @@ const Contact = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.4 }}
             >
-              <label className="block text-sm mb-1">Your Name</label>
+              <label className="block text-sm mb-1 text-white">Your Name</label>
               <input
                 type="text"
                 name="user_name"
@@ -80,7 +80,7 @@ const Contact = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.4, delay: 0.1 }}
             >
-              <label className="block text-sm mb-1">Your Email</label>
+              <label className="block text-sm mb-1 text-white">Your Email</label>
               <input
                 type="email"
                 name="user_email"
@@ -94,7 +94,7 @@ const Contact = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.2 }}
             >
-              <label className="block text-sm mb-1">Message</label>
+              <label className="block text-sm mb-1 text-white">Message</label>
               <textarea
                 name="message"
                 rows={5}

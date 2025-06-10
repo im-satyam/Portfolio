@@ -1,19 +1,23 @@
 import { motion } from "framer-motion";
 import {
+  FaFlask,
   FaGitAlt,
   FaGithub,
   FaJava,
   FaNodeJs,
+  FaPython,
   FaReact,
 } from "react-icons/fa";
 import {
   SiCplusplus,
   SiExpress,
   SiFirebase,
+  SiGoland,
   SiMongodb,
+  SiMysql, // Assuming SiMysql is correct now
   SiNextdotjs,
   SiTailwindcss,
-  SiTypescript,
+  SiTypescript
 } from "react-icons/si";
 
 const skills = [
@@ -29,17 +33,33 @@ const skills = [
   { name: "Next.js", icon: <SiNextdotjs className="text-white" /> },
   { name: "Tailwind CSS", icon: <SiTailwindcss className="text-cyan-400" /> },
   { name: "GitHub", icon: <FaGithub className="text-white" /> },
+  { name: "Golang", icon: <SiGoland className="text-cyan-500" /> },
+  { name: "Python", icon: <FaPython className="text-yellow-500" /> },
+  { name: "Flask", icon: <FaFlask className="text-gray-400" /> },
+  { name: "MySQL", icon: <SiMysql className="text-blue-600" /> },
 ];
 
 const Skills = () => {
   return (
     <div
-      className="relative h-[40rem] w-full bg-cover bg-center"
-      style={{ backgroundImage: "url('\background-6824_512.gif')" }}
+      className="relative h-[40rem] w-full bg-cover bg-center bg-no-repeat"
+      // ABSOLUTELY ESSENTIAL: Ensure the path is correct.
+      // If `background-6824_512.gif` is directly in your `public` folder:
+      style={{ backgroundImage: "url('/background-6824_512.gif')" }}
+
+      // FOR DEBUGGING: TEMPORARILY comment out the overlay div
+      // This helps confirm if the background image is loading at all.
+      // <div className="absolute inset-0 bg-black bg-opacity-50 z-0" />
+
       id="skills"
     >
-      {/* Semi-transparent dark overlay but not full black */}
-      <div className="absolute inset-0 bg-black bg-opacity-50 z-0" />
+        {/* TEMPORARILY REMOVE OR COMMENT OUT THIS LINE FOR DEBUGGING */}
+        {/* If the GIF appears after commenting this, it means your overlay is too opaque or the GIF itself is very dark */}
+        {/* <div className="absolute inset-0 bg-black bg-opacity-50 z-0" /> */}
+
+        {/* Re-add the overlay if the GIF appears after the above step */}
+        <div className="absolute inset-0 bg-black bg-opacity-50 z-0" />
+
 
       {/* Content container with blur */}
       <div className="absolute inset-0 flex items-center justify-center z-10 px-8 max-w-6xl mx-auto text-center">
@@ -81,7 +101,6 @@ const Skills = () => {
                 onMouseDown={(e) => e.preventDefault()}
               >
                 <div className="text-5xl">{skill.icon}</div>
-                {/* Make skill name white for visibility */}
                 <p className="text-lg text-white">{skill.name}</p>
               </motion.div>
             ))}
