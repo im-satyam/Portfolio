@@ -11,7 +11,8 @@ const Intro = () => {
   return (
     <section
       id="home"
-      className="w-full min-h-screen bg-cover bg-center py-20 px-4 sm:px-8 relative flex items-center justify-center"
+      className="w-full min-h-screen bg-cover bg-center py-20 pb-32 px-4 sm:px-8 relative flex items-center justify-center"
+
       style={{ backgroundImage: "url('/moon-7946_512.gif')" }}
     >
       {/* Overlay */}
