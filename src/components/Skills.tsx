@@ -14,10 +14,10 @@ import {
   SiFirebase,
   SiGoland,
   SiMongodb,
-  SiMysql, // Assuming SiMysql is correct now
+  SiMysql,
   SiNextdotjs,
   SiTailwindcss,
-  SiTypescript
+  SiTypescript,
 } from "react-icons/si";
 
 const skills = [
@@ -41,38 +41,26 @@ const skills = [
 
 const Skills = () => {
   return (
-    <div
-      className="relative h-[40rem] w-full bg-cover bg-center bg-no-repeat"
-      // ABSOLUTELY ESSENTIAL: Ensure the path is correct.
-      // If `background-6824_512.gif` is directly in your `public` folder:
-      style={{ backgroundImage: "url('/background-6824_512.gif')" }}
-
-      // FOR DEBUGGING: TEMPORARILY comment out the overlay div
-      // This helps confirm if the background image is loading at all.
-      // <div className="absolute inset-0 bg-black bg-opacity-50 z-0" />
-
+    <section
       id="skills"
+      className="relative w-full bg-cover bg-center bg-no-repeat py-20 px-4 sm:px-8"
+      style={{ backgroundImage: "url('/background-6824_512.gif')" }}
     >
-        {/* TEMPORARILY REMOVE OR COMMENT OUT THIS LINE FOR DEBUGGING */}
-        {/* If the GIF appears after commenting this, it means your overlay is too opaque or the GIF itself is very dark */}
-        {/* <div className="absolute inset-0 bg-black bg-opacity-50 z-0" /> */}
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black bg-opacity-50 z-0" />
 
-        {/* Re-add the overlay if the GIF appears after the above step */}
-        <div className="absolute inset-0 bg-black bg-opacity-50 z-0" />
-
-
-      {/* Content container with blur */}
-      <div className="absolute inset-0 flex items-center justify-center z-10 px-8 max-w-6xl mx-auto text-center">
+      {/* Content */}
+      <div className="relative z-10 max-w-6xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="bg-black bg-opacity-40 rounded-lg p-8 w-full"
+          className="bg-black bg-opacity-40 rounded-lg p-8"
           style={{ backdropFilter: "blur(8px)" }}
         >
           <motion.h2
             initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             className="text-4xl font-bold mb-10 text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600"
             style={{ textShadow: "0 0 8px rgba(0,0,0,0.8)" }}
@@ -82,7 +70,7 @@ const Skills = () => {
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, delay: 0.3 }}
             className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-x-12 gap-y-10"
           >
@@ -91,12 +79,6 @@ const Skills = () => {
                 key={index}
                 whileHover={{ scale: 1.1 }}
                 className="flex flex-col items-center space-y-2 text-center cursor-pointer select-none"
-                style={{
-                  transformOrigin: "center",
-                  transition: "transform 0.2s ease",
-                  userSelect: "none",
-                  outline: "none",
-                }}
                 tabIndex={-1}
                 onMouseDown={(e) => e.preventDefault()}
               >
@@ -107,7 +89,7 @@ const Skills = () => {
           </motion.div>
         </motion.div>
       </div>
-    </div>
+    </section>
   );
 };
 

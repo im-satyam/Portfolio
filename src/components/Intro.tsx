@@ -9,48 +9,47 @@ const Intro = () => {
   });
 
   return (
-    <div
-      className="relative h-[40rem] w-full bg-cover bg-center"
+    <section
+      id="home"
+      className="w-full bg-cover bg-center py-20 px-4 sm:px-8"
       style={{ backgroundImage: "url('/moon-7946_512.gif')" }}
     >
-      {/* Dark overlay */}
+      {/* Overlay */}
       <div className="absolute inset-0 bg-black opacity-50 z-0" />
-      {/* Image positioned relative inside container */}
-      <div className="absolute top-1/2 left-80 -translate-y-1/2 w-96 z-10">
-        <img
-          src="\MyImg.jpg"
-          alt="Intro Image"
-          className="w-100 h-100 rounded-full object-cover"
-        />
+
+      <div className="relative z-10 flex flex-col-reverse md:flex-row items-center justify-center gap-10 max-w-6xl mx-auto">
+        {/* Text Section */}
+        <div className="text-center md:text-left">
+          <motion.h1
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className="text-white text-4xl md:text-5xl font-bold"
+          >
+            Hello <span className="animate-wave ml-3 inline-block">👋</span>
+          </motion.h1>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.2, delay: 0.3 }}
+            className="mt-4 text-2xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-600 to-blue-700"
+          >
+            <span className="mr-2">I am {text}</span>
+            <Cursor cursorColor="#7C3AED" />
+          </motion.div>
+        </div>
+
+        {/* Image Section */}
+        <div className="w-40 h-40 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-white shadow-xl">
+          <img
+            src="/MyImg.jpg"
+            alt="Intro Image"
+            className="w-full h-full object-cover"
+          />
+        </div>
       </div>
 
-      {/* Animated Content */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center z-20 text-center space-y-6 px-4">
-        {/* Hello with wave emoji */}
-        <motion.div
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="text-white text-5xl font-bold flex items-center justify-center"
-          style={{ marginLeft: "28rem" }} // moves right to clear the image area
-        >
-          Hello <span className="animate-wave ml-3 inline-block">👋</span>
-        </motion.div>
-
-        {/* The typewriter text */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.2, delay: 0.3 }}
-          className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-600 to-blue-700"
-          style={{ marginLeft: "28rem" }} // align with "Hello"
-        >
-          <span className="mr-2">I am {text}</span>
-          <Cursor cursorColor="#7C3AED" />
-        </motion.div>
-      </div>
-
-      {/* CSS for waving animation */}
       <style>{`
         @keyframes wave {
           0% { transform: rotate(0deg); }
@@ -70,7 +69,7 @@ const Intro = () => {
           transform-origin: 70% 70%;
         }
       `}</style>
-    </div>
+    </section>
   );
 };
 
