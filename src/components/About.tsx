@@ -30,16 +30,20 @@ const About = () => {
             transition={{ duration: 1.2, delay: 0.3 }}
             className="text-base sm:text-lg leading-relaxed text-gray-300"
           >
-           Hi! I’m <strong className="text-white">Satyam Kumar</strong>, a passionate Full Stack Developer and a Computer Science undergraduate specializing in Cyber Security, currently pursuing my B.E. and set to graduate in 2027. My journey in tech is driven by curiosity, creativity, and a strong desire to build solutions that make a meaningful impact.
+            Hi! I’m <strong className="text-white">Satyam Kumar</strong>, a passionate Full Stack Developer and a Computer Science undergraduate specializing in Cyber Security, currently pursuing my B.E. and set to graduate in 2027. My journey in tech is driven by curiosity, creativity, and a strong desire to build solutions that make a meaningful impact.
             <br /><br />
             I specialize in JavaScript technologies — particularly{" "}
             <strong className="text-white">Node.js</strong>,{" "}
             <strong className="text-white">React.js</strong>, and{" "}
-            <strong className="text-white">Express.js</strong> — which allow me to develop responsive front-end interfaces and robust back-end systems. Whether it's designing intuitive user experiences or engineering scalable APIs, I love turning ideas into efficient and secure web applications.
+            <strong className="text-white">Express.js</strong> — which allow me to create responsive front-end interfaces and robust back-end systems. I’m also skilled in{" "}
+            <strong className="text-white">Python</strong> and{" "}
+            <strong className="text-white">Flask</strong>, which help me develop efficient APIs and backend services, and{" "}
+            <strong className="text-white">Docker</strong> for containerizing and deploying scalable applications.
             <br /><br />
-            Currently, I’m expanding my skill set by learning <strong className="text-white">Golang</strong>, aiming to leverage its strengths in building high-performance, concurrent backend services. I also enjoy exploring new tools, frameworks, and techniques to stay ahead in the ever-evolving tech landscape.
+            Currently, I’m expanding my expertise in{" "}
+            <strong className="text-white">Golang</strong>, aiming to leverage its strengths in building high-performance, concurrent backend services. I enjoy exploring new tools, frameworks, and techniques to stay ahead in the ever-evolving tech landscape.
             <br /><br />
-            Driven by a strong problem-solving mindset and an eagerness to learn, I’m always excited to collaborate, innovate, and contribute to impactful projects as a developer.
+            With a strong problem-solving mindset, the ability to learn new technologies quickly, and a collaborative approach, I thrive in team environments where innovation and impact come first. I’m always excited to build, collaborate, and contribute to meaningful projects as a developer.
           </motion.p>
         </motion.div>
       </div>
