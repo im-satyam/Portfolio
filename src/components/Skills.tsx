@@ -19,6 +19,7 @@ import {
   SiTypescript,
   SiDocker,
   SiFlask,
+  SiDjango,
 } from "react-icons/si";
 
 const skills = [
@@ -36,6 +37,7 @@ const skills = [
   { name: "Golang", icon: <SiGoland className="text-cyan-500" /> },
   { name: "Java", icon: <FaJava className="text-red-500" /> },
   { name: "C++", icon: <SiCplusplus className="text-blue-300" /> },
+  { name: "Django", icon: <SiDjango className="text-green-700" /> },
 
   // Databases
   { name: "MongoDB", icon: <SiMongodb className="text-green-600" /> },
