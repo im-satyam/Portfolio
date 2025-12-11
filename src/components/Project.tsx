@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaGlobe } from "react-icons/fa";
 
 interface Project {
   title: string;
@@ -111,6 +111,10 @@ const projects: Project[] = [
 ];
 
 const Project = () => {
+  // shared link style so Demo and View Source look identical
+  const linkClass =
+    "inline-flex items-center gap-2 text-blue-400 hover:text-blue-600 transition";
+
   return (
     <div
       id="projects"
@@ -151,15 +155,47 @@ const Project = () => {
                 </div>
               </div>
 
-              <a
-                href={githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-600 transition"
-              >
-                <FaGithub size={20} />
-                <span>View Source</span>
-              </a>
+              <div className="flex items-center gap-4 mt-4">
+              
+                {title === "Medipal" && (
+                  <a
+                    href="https://hack2a.github.io/MediPal/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={linkClass}
+                    aria-label="Medipal demo"
+                  >
+                    <FaGlobe size={22 } />
+                    <span>Demo</span>
+                  </a>
+                )}
+
+            
+                {title === "Caliber-Cops" && (
+                  <a
+                    href="https://hack2a.github.io/CalibreCops/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={linkClass}
+                    aria-label="Caliber-Cops demo"
+                  >
+                    <FaGlobe size={22} />
+                    <span>Demo</span>
+                  </a>
+                )}
+
+            
+                <a
+                  href={githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={linkClass}
+                  aria-label={`${title} source`}
+                >
+                  <FaGithub size={20} />
+                  <span>View Source</span>
+                </a>
+              </div>
             </motion.div>
           )
         )}
