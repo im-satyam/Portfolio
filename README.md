@@ -1,54 +1,102 @@
-# React + TypeScript + Vite
+# Satyam Kumar - Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive, and interactive portfolio website built with React, TypeScript, and Tailwind CSS. This project showcases my skills, projects, and professional background with a sleek glassmorphism design and a global video background.
 
-Currently, two official plugins are available:
+## 🌟 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-   **Global Video Background**: A continuous, high-quality video background that sets the tone for the entire application.
+-   **Glassmorphism UI**: Consistent semi-transparent design across all sections (Skills, Projects, About, Contact) for a modern aesthetic.
+-   **Interactive Animations**: Powered by `framer-motion` for smooth transitions, hover effects, and scroll reveals.
+-   **Responsive Design**: Fully optimized for all device sizes, from mobile phones to large desktop screens.
+-   **Dynamic Skills Section**: A grid layout showcasing technical skills with individual cards and hover effects.
+-   **Project Showcase**: Detailed project cards with technology chips and links to live demos and GitHub repositories.
+-   **Contact Form**: Functional contact form integrated with **EmailJS**, featuring real-time feedback and validation.
+-   **Performance Optimized**: Includes a custom preloader and efficient asset loading.
+-   **SEO Friendly**: Optimized with meta tags for better search engine visibility and social sharing.
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+-   **Frontend Framework**: [React 19](https://react.dev/)
+-   **Language**: [TypeScript](https://www.typescriptlang.org/)
+-   **Build Tool**: [Vite](https://vitejs.dev/)
+-   **Styling**: [Tailwind CSS 4](https://tailwindcss.com/)
+-   **Animations**: [Framer Motion](https://www.framer.com/motion/)
+-   **Icons**: [React Icons](https://react-icons.github.io/react-icons/)
+-   **Email Service**: [EmailJS](https://www.emailjs.com/)
+-   **Typewriter Effect**: `react-simple-typewriter`
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🚀 Getting Started
+
+Follow these instructions to get a copy of the project up and running on your local machine.
+
+### Prerequisites
+
+Ensure you have Node.js installed on your system.
+-   [Node.js](https://nodejs.org/) (Version 16 or higher recommended)
+
+### Installation
+
+1.  **Clone the repository**
+    ```bash
+    git clone https://github.com/im-satyam/Portfolio.git
+    cd Portfolio
+    ```
+
+2.  **Install dependencies**
+    ```bash
+    npm install
+    ```
+
+3.  **Start the development server**
+    ```bash
+    npm run dev
+    ```
+    The application will be available at `http://localhost:5173`.
+
+### Building for Production
+
+To create a production-ready build:
+
+```bash
+npm run build
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+To preview the production build locally:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+npm run preview
 ```
+
+## 📂 Project Structure
+
+```
+Portfolio/
+├── public/              # Static assets (images, videos, icons)
+├── src/
+│   ├── components/      # Reusable UI components
+│   │   ├── About.tsx
+│   │   ├── Contact.tsx
+│   │   ├── Footer.tsx
+│   │   ├── Header.tsx
+│   │   ├── Intro.tsx
+│   │   ├── Preloader.tsx
+│   │   ├── Project.tsx
+│   │   ├── ScrollToTop.tsx
+│   │   └── Skills.tsx
+│   ├── App.tsx          # Main application component
+│   ├── main.tsx         # Entry point
+│   └── index.css        # Global styles and Tailwind directives
+├── index.html           # HTML template
+├── package.json         # Dependencies and scripts
+├── tsconfig.json        # TypeScript configuration
+└── vite.config.ts       # Vite configuration
+```
+
+## 📧 Contact
+
+**Satyam Kumar**
+-   **LinkedIn**: [Satyam Kumar](https://www.linkedin.com/in/satyam-kumar-6723a22a8/)
+-   **GitHub**: [im-satyam](https://github.com/im-satyam)
+
+---
+*Built with ❤️ by Satyam Kumar*
