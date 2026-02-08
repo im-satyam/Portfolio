@@ -8,6 +8,7 @@ import Project from './components/Project'
 import Skills from './components/Skills'
 import ScrollToTop from './components/ScrollToTop'
 import Preloader from './components/Preloader'
+import Achievements from './components/Achievements'
 import "./index.css"
 
 function App() {
@@ -47,6 +48,10 @@ function App() {
 
       <div id="skills">
         <Skills />
+      </div>
+
+      <div id="achievements">
+        <Achievements />
       </div>
 
       <div id="projects">
