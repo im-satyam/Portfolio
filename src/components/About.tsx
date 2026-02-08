@@ -4,16 +4,15 @@ const About = () => {
   return (
     <section
       id="about"
-      className="w-full bg-black py-20 px-4 sm:px-8"
+      className="w-full min-h-screen py-20 px-4 sm:px-8 relative bg-transparent flex items-center justify-center"
     >
-      <div className="max-w-4xl mx-auto text-center">
+      <div className="relative z-10 max-w-4xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
-          className="bg-black bg-opacity-70 rounded-lg p-6 sm:p-8"
-          style={{ backdropFilter: 'blur(6px)' }}
+          className="bg-black bg-opacity-60 backdrop-blur-sm rounded-xl p-6 sm:p-8 border border-gray-800 shadow-xl"
         >
           <motion.h1
             initial={{ opacity: 0, y: -20 }}
@@ -24,27 +23,25 @@ const About = () => {
             About Me
           </motion.h1>
 
-          <motion.p
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, delay: 0.3 }}
-            className="text-base sm:text-lg leading-relaxed text-gray-300"
+            className="text-base sm:text-lg leading-relaxed text-gray-300 text-left space-y-4"
           >
-            Hi! I’m <strong className="text-white">Satyam Kumar</strong>, a passionate Full Stack Developer and a Computer Science undergraduate specializing in Cyber Security, currently pursuing my B.E. and set to graduate in 2027. My journey in tech is driven by curiosity, creativity, and a strong desire to build solutions that make a meaningful impact.
-            <br /><br />
-            I specialize in JavaScript technologies — particularly{" "}
-            <strong className="text-white">Node.js</strong>,{" "}
-            <strong className="text-white">React.js</strong>, and{" "}
-            <strong className="text-white">Express.js</strong> — which allow me to create responsive front-end interfaces and robust back-end systems. I’m also skilled in{" "}
-            <strong className="text-white">Python</strong> and{" "}
-            <strong className="text-white">Flask</strong>, which help me develop efficient APIs and backend services, and{" "}
-            <strong className="text-white">Docker</strong> for containerizing and deploying scalable applications.
-            <br /><br />
-            Currently, I’m expanding my expertise in{" "}
-            <strong className="text-white">Golang</strong>, aiming to leverage its strengths in building high-performance, concurrent backend services. I enjoy exploring new tools, frameworks, and techniques to stay ahead in the ever-evolving tech landscape.
-            <br /><br />
-            With a strong problem-solving mindset, the ability to learn new technologies quickly, and a collaborative approach, I thrive in team environments where innovation and impact come first. I’m always excited to build, collaborate, and contribute to meaningful projects as a developer.
-          </motion.p>
+            <p>
+              Hi, I’m <strong className="text-white">Satyam Kumar</strong>, a Computer Science student at Dayananda Sagar College of Engineering, graduating in 2027.
+            </p>
+            <p>
+              I’m a developer who enjoys building web applications and figuring out how things work behind the scenes. Most of my time goes into working on full-stack projects using <strong className="text-white">JavaScript</strong> and <strong className="text-white">Python</strong>, and I practice data structures and algorithms in <strong className="text-white">C++</strong> to keep improving my problem-solving skills.
+            </p>
+            <p>
+              I like learning by building. I’ve worked on a few full-stack and backend projects where I handled things like authentication, APIs, and connecting the frontend to real data. I’ve also started integrating AI models through the backend in some of my projects, where user inputs are sent to an AI service and the results are processed and shown in the app. It’s something I enjoy exploring because it combines backend logic with real user features.
+            </p>
+            <p>
+              I regularly practice DSA and competitive programming — I’m a 2<span className="text-yellow-400">★</span> CodeChef coder and have solved 170+ LeetCode problems across different topics. It’s something I do consistently because it helps me think more clearly and write better code.
+            </p>
+          </motion.div>
         </motion.div>
       </div>
     </section>

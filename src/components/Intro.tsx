@@ -3,7 +3,7 @@ import { Cursor, useTypewriter } from "react-simple-typewriter";
 
 const Intro = () => {
   const [text] = useTypewriter({
-    words: ["Satyam Kumar", "a Web Developer", "an Engineer"],
+    words: ["Satyam Kumar", "a Web Developer", "an Engineer", "a Problem Solver"],
     loop: true,
     delaySpeed: 2000,
   });
@@ -11,19 +11,15 @@ const Intro = () => {
   return (
     <section
       id="home"
-      className="w-full min-h-screen bg-cover bg-center py-20 pb-32 px-4 sm:px-8 relative flex items-center justify-center"
-
-      style={{ backgroundImage: "url('/moon-7946_512.gif')" }}
+      className="w-full min-h-screen py-20 pb-32 px-4 sm:px-8 relative flex items-center justify-center bg-transparent"
     >
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black opacity-50 z-0" />
 
       {/* Centered Content */}
       <div className="relative z-10 flex flex-col md:flex-row items-center justify-center gap-8 max-w-6xl mx-auto text-center md:text-left">
         {/* Image */}
         <div className="w-40 h-40 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-white shadow-xl">
           <img
-            src="/MyImg.jpg"
+            src="/photo.jpeg"
             alt="Intro"
             className="w-full h-full object-cover"
           />
@@ -72,6 +68,35 @@ const Intro = () => {
           transform-origin: 70% 70%;
         }
       `}</style>
+
+      {/* Scroll Down Indicator */}
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 2, duration: 1 }}
+        className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
+      >
+        <motion.div
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+          className="text-gray-400"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-8 w-8"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M19 14l-7 7m0 0l-7-7m7 7V3"
+            />
+          </svg>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };

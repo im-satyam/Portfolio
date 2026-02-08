@@ -1,7 +1,7 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 const Footer = () => {
   return (
-    <footer className="bg-black text-gray-300 py-8 mt-auto">
+    <footer className="bg-black bg-opacity-60 backdrop-blur-sm text-gray-300 py-8 mt-auto border-t border-gray-800">
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
         {/* Left: copyright */}
         <p className="text-sm">&copy; {new Date().getFullYear()} Satyam Kumar. All rights reserved.</p>
@@ -28,7 +28,7 @@ const Footer = () => {
             <FaLinkedin size={24} />
           </a>
 
-          
+
         </div>
       </div>
     </footer>

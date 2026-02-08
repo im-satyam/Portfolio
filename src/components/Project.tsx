@@ -118,8 +118,8 @@ const Project = () => {
   return (
     <div
       id="projects"
-      className="min-h-screen bg-black text-white p-8"
-      style={{ scrollMarginTop: "5rem" }}
+      className="min-h-screen bg-transparent text-white p-8 pt-20"
+      style={{ scrollMarginTop: "10rem" }}
     >
       <h1 className="text-4xl font-bold mb-8 text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600">
         My Projects
@@ -130,7 +130,7 @@ const Project = () => {
           ({ title, description, technologies, githubUrl }, index) => (
             <motion.div
               key={title}
-              className="bg-gray-900 rounded-lg shadow-lg p-6 flex flex-col justify-between"
+              className="bg-black bg-opacity-60 backdrop-blur-sm rounded-xl shadow-xl p-6 flex flex-col justify-between border border-gray-800 hover:border-blue-500/50 transition-all hover:bg-opacity-80"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -138,7 +138,7 @@ const Project = () => {
             >
               <div>
                 <h2 className="text-2xl font-semibold mb-2">{title}</h2>
-                <p className="mb-4 text-gray-300">{description}</p>
+                <p className="mb-4 text-gray-300 line-clamp-4">{description}</p>
 
                 <div className="mb-4">
                   <h3 className="font-semibold mb-1">Technologies Used:</h3>
@@ -156,7 +156,7 @@ const Project = () => {
               </div>
 
               <div className="flex items-center gap-4 mt-4">
-              
+
                 {title === "Medipal" && (
                   <a
                     href="https://hack2a.github.io/MediPal/"
@@ -165,12 +165,12 @@ const Project = () => {
                     className={linkClass}
                     aria-label="Medipal demo"
                   >
-                    <FaGlobe size={22 } />
+                    <FaGlobe size={22} />
                     <span>Demo</span>
                   </a>
                 )}
 
-            
+
                 {title === "Caliber-Cops" && (
                   <a
                     href="https://hack2a.github.io/CalibreCops/"
@@ -184,7 +184,7 @@ const Project = () => {
                   </a>
                 )}
 
-            
+
                 <a
                   href={githubUrl}
                   target="_blank"
