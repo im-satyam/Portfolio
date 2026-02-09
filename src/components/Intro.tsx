@@ -3,7 +3,7 @@ import { Cursor, useTypewriter } from "react-simple-typewriter";
 
 const Intro = () => {
   const [text] = useTypewriter({
-    words: ["Satyam Kumar", "a Web Developer", "an Engineer", "a Problem Solver"],
+    words: ["a Web Developer", "an Engineer", "a Problem Solver"],
     loop: true,
     delaySpeed: 2000,
   });
@@ -34,7 +34,8 @@ const Intro = () => {
             className="text-white text-5xl md:text-7xl font-bold font-bangers tracking-wide drop-shadow-[2px_2px_0_#E63946]"
             style={{ fontFamily: 'Bangers, system-ui' }}
           >
-            I'm <span className="glitch inline-block" data-text="Satyam Kumar">Satyam Kumar</span> <span className="animate-wave ml-3 inline-block">👋</span>
+            Hello <span className="animate-wave ml-3 inline-block">👋</span> <br />
+            I'm <span className="glitch inline-block" data-text="Satyam Kumar">Satyam Kumar</span>
           </motion.h1>
 
           <motion.div
