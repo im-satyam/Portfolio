@@ -36,7 +36,7 @@ function App() {
           playsInline
           className="absolute top-0 left-0 w-full h-full object-cover"
         >
-          <source src="/Spider_Web_Video_Generation (online-video-cutter.com).mp4" type="video/mp4" />
+          <source src="/videoplayback.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-br from-red-900/40 via-black/80 to-black/90"></div>
       </div>
