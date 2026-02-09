@@ -35,7 +35,7 @@ const ScrollToTop = () => {
                     onClick={scrollToTop}
                     className="fixed bottom-8 right-8 z-[100] cursor-pointer"
                 >
-                    <div className="bg-blue-600 bg-opacity-80 backdrop-blur-md hover:bg-blue-700 text-white p-3 rounded-full shadow-lg border border-blue-400 transition-all duration-300 group">
+                    <div className="bg-red-600 bg-opacity-90 backdrop-blur-md hover:bg-red-700 text-white p-3 rounded-full shadow-[0_0_15px_rgba(229,9,20,0.5)] border border-red-500 hover:scale-110 transition-all duration-300 group">
                         <FaArrowUp className="text-xl group-hover:-translate-y-1 transition-transform" />
                     </div>
                 </motion.div>
