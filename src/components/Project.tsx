@@ -111,7 +111,6 @@ const projects: Project[] = [
 ];
 
 const Project = () => {
-  // shared link style so Demo and View Source look identical
   const linkClass =
     "inline-flex items-center gap-2 text-blue-400 hover:text-blue-600 transition";
 

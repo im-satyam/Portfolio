@@ -15,7 +15,6 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate loading time or wait for resources
     const timer = setTimeout(() => {
       setLoading(false);
     }, 2000);

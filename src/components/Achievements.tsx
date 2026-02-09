@@ -17,13 +17,14 @@ const achievements = [
         details: "Actively solving algorithmic challenges across various topics.",
         icon: <SiLeetcode className="text-yellow-500" />,
         link: "https://leetcode.com/u/Scoder22/",
+        color: "from-yellow-400 to-orange-500",
     },
     {
         title: "Codeforces",
         description: "Max Rating 800+",
         details: "Competitive programmer participating in regular rounds.",
         icon: <SiCodeforces className="text-blue-500" />,
-        link: "https://codeforces.com/profile/im.satyam", // Placeholder
+        link: "https://codeforces.com/profile/im.satyam",
         color: "from-blue-500 to-cyan-500",
     },
     {
