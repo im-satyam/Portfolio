@@ -64,22 +64,9 @@ const projects: Project[] = [
     ],
     githubUrl: "https://github.com/im-satyam/SandBox2025",
   },
+
   {
-    title: "Blood Bank",
-    description:
-      "Developed a responsive web application to streamline blood donation and management processes. Implemented user-friendly interfaces for donors and admins using React.js and Bootstrap. Built a secure backend with Express.js to handle donor registrations, blood inventory tracking, and appointment scheduling. Ensured smooth data flow between frontend and backend through RESTful APIs.",
-    technologies: [
-      "React",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "Bootstrap",
-      "RESTful APIs",
-    ],
-    githubUrl: "https://github.com/im-satyam/bb",
-  },
-  {
-    title: "Book-Buy-Sell",
+    title: "Bookify",
     description:
       "Developed a responsive web application for buying and selling books, featuring real-time listings, user authentication, and secure transactions. Utilized Firebase for backend services including Firestore database for storing listings, Firebase Authentication for user login/signup, and Firebase Hosting for deployment. Designed an intuitive UI with React.js to ensure a seamless user experience for book buyers and sellers.",
     technologies: [

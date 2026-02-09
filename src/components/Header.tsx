@@ -20,14 +20,14 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 bg-black/90 text-white font-bold w-full h-16 flex justify-between items-center px-6 shadow-[0_4px_10px_rgba(229,9,20,0.3)] border-b border-red-900">
 
-      <div className="flex items-center">
-        <span className="text-2xl text-red-600 font-bangers tracking-wider drop-shadow-[2px_2px_0_#991B1B]" style={{ fontFamily: 'Bangers, system-ui' }}>SPIDER-DEV</span>
-      </div>
-
       <div className="flex items-center md:hidden">
         <button onClick={toggleMenu} className="focus:outline-none text-red-500 hover:text-red-400">
           {menuOpen ? <HiX size={28} /> : <HiMenu size={28} />}
         </button>
+      </div>
+
+      <div className="flex items-center">
+        <span className="text-2xl text-red-600 font-bangers tracking-wider drop-shadow-[2px_2px_0_#991B1B]" style={{ fontFamily: 'Bangers, system-ui' }}>SPIDER-DEV</span>
       </div>
 
 
