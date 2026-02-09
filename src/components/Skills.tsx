@@ -69,7 +69,8 @@ const Skills = () => {
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="text-4xl font-bold mb-12 text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600 drop-shadow-lg"
+          className="text-5xl font-bold mb-12 text-white drop-shadow-[4px_4px_0_#E63946]"
+          style={{ fontFamily: 'Bangers, system-ui' }}
         >
           My Skills
         </motion.h2>
@@ -90,14 +91,16 @@ const Skills = () => {
               whileHover={{
                 scale: 1.05,
                 translateY: -5,
-                transition: { duration: 0.2, delay: 0 }
+                boxShadow: "0 0 20px rgba(230, 57, 70, 0.6)",
+                borderColor: "#E63946",
+                transition: { duration: 0.1, delay: 0 }
               }}
-              className="bg-black bg-opacity-60 backdrop-blur-sm rounded-xl p-6 flex flex-col items-center justify-center gap-4 border border-gray-800 shadow-xl hover:bg-opacity-80 hover:border-blue-500/50 transition-all cursor-pointer group"
+              className="bg-black/80 backdrop-blur-sm rounded-xl p-6 flex flex-col items-center justify-center gap-4 border border-gray-800 shadow-xl transition-all cursor-pointer group"
             >
               <div className="text-5xl group-hover:drop-shadow-[0_0_10px_rgba(255,255,255,0.3)] transition-all">
                 {skill.icon}
               </div>
-              <p className="text-lg font-medium text-gray-200 group-hover:text-white transition-colors">
+              <p className="text-lg font-medium text-gray-200 group-hover:text-red-400 transition-colors font-roboto-mono">
                 {skill.name}
               </p>
             </motion.div>

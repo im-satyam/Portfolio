@@ -17,10 +17,14 @@ const Header = () => {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-black text-white font-bold w-full h-16 flex justify-between items-center px-6 shadow-md">
+    <header className="sticky top-0 z-50 bg-black/90 text-white font-bold w-full h-16 flex justify-between items-center px-6 shadow-[0_4px_10px_rgba(229,9,20,0.3)] border-b border-red-900">
       {/* Logo or Left Spacer */}
+      <div className="flex items-center">
+        <span className="text-2xl text-red-600 font-bangers tracking-wider drop-shadow-[2px_2px_0_#991B1B]" style={{ fontFamily: 'Bangers, system-ui' }}>SPIDER-DEV</span>
+      </div>
+
       <div className="flex items-center md:hidden">
-        <button onClick={toggleMenu} className="focus:outline-none">
+        <button onClick={toggleMenu} className="focus:outline-none text-red-500 hover:text-red-400">
           {menuOpen ? <HiX size={28} /> : <HiMenu size={28} />}
         </button>
       </div>
@@ -32,11 +36,11 @@ const Header = () => {
             <li key={item.name} className="relative cursor-pointer group">
               <a
                 href={item.link}
-                className="transition-all duration-300"
+                className="transition-all duration-300 font-roboto-mono hover:text-red-500 tracking-tight"
               >
                 {item.name}
               </a>
-              <span className="absolute left-0 bottom-0 h-0.5 w-0 bg-white transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute left-0 bottom-0 h-0.5 w-0 bg-red-600 transition-all duration-300 group-hover:w-full shadow-[0_0_10px_#E63946]"></span>
             </li>
           ))}
         </ul>

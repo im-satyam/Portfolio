@@ -1,10 +1,55 @@
-
 @import "tailwindcss";
+
+:root {
+  --spider-red: #E63946;
+  --spider-black: #050505;
+  --spider-dark: #121212;
+  --spider-blue: #1D3557;
+  --spider-web: rgba(255, 255, 255, 0.1);
+}
+
+/* Base Styles */
+body {
+  font-family: 'Roboto Mono', monospace;
+  background-color: var(--spider-black);
+  color: #ffffff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Bangers', system-ui;
+  letter-spacing: 1px;
+}
+
+/* Custom Selection */
+::selection {
+  background-color: var(--spider-red);
+  color: #ffffff;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--spider-black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--spider-red);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff0000;
+}
 
 /* Slow down the blinking cursor animation */
 .Typewriter__cursor {
   animation-duration: 1.5s !important; /* slower blink */
+  color: var(--spider-red) !important;
 }
+
 html {
   scroll-behavior: smooth;
 }

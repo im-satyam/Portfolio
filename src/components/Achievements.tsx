@@ -48,7 +48,8 @@ const Achievements = () => {
                     initial={{ opacity: 0, y: -20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1 }}
-                    className="text-4xl md:text-5xl font-bold mb-10 text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600 drop-shadow-lg"
+                    className="text-5xl md:text-6xl font-bold mb-10 text-white drop-shadow-[5px_5px_0_#E63946]"
+                    style={{ fontFamily: 'Bangers, system-ui' }}
                 >
                     Achievements
                 </motion.h2>
@@ -63,16 +64,21 @@ const Achievements = () => {
                             initial={{ opacity: 0, scale: 0.9 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
-                            whileHover={{ scale: 1.05 }}
-                            className="bg-black bg-opacity-60 backdrop-blur-md rounded-2xl p-6 md:p-8 flex flex-col items-center justify-center gap-4 border border-gray-800 shadow-xl hover:bg-opacity-80 hover:border-blue-500/50 transition-all cursor-pointer group h-full"
+                            whileHover={{
+                                scale: 1.05,
+                                boxShadow: "0 0 25px rgba(229, 9, 20, 0.5)",
+                                borderColor: "#E63946"
+                            }}
+                            className="bg-black/80 backdrop-blur-md rounded-2xl p-6 md:p-8 flex flex-col items-center justify-center gap-4 border-2 border-gray-800 shadow-xl transition-all cursor-pointer group h-full relative overflow-hidden"
                         >
-                            <div className="text-5xl md:text-6xl mb-2 group-hover:drop-shadow-[0_0_20px_rgba(255,255,255,0.3)] transition-all">
+                            <div className="absolute inset-0 bg-red-900/10 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+                            <div className="text-5xl md:text-6xl mb-2 group-hover:rotate-12 transition-transform duration-300">
                                 {item.icon}
                             </div>
-                            <h3 className={`text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r ${item.color}`}>
+                            <h3 className={`text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r ${item.color} font-bangers tracking-wider`}>
                                 {item.title}
                             </h3>
-                            <p className="text-xl md:text-2xl font-semibold text-white">
+                            <p className="text-xl md:text-2xl font-semibold text-white font-roboto-mono">
                                 {item.description}
                             </p>
                             <p className="text-gray-400 text-base md:text-lg">

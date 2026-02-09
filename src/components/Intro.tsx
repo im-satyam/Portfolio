@@ -17,7 +17,7 @@ const Intro = () => {
       {/* Centered Content */}
       <div className="relative z-10 flex flex-col md:flex-row items-center justify-center gap-8 max-w-6xl mx-auto text-center md:text-left">
         {/* Image */}
-        <div className="w-40 h-40 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-white shadow-xl">
+        <div className="w-40 h-40 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-red-600 shadow-[0_0_20px_rgba(229,9,20,0.6)]">
           <img
             src="/photo.jpeg"
             alt="Intro"
@@ -31,7 +31,8 @@ const Intro = () => {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="text-white text-4xl md:text-5xl font-bold"
+            className="text-white text-5xl md:text-7xl font-bold font-bangers tracking-wide drop-shadow-[2px_2px_0_#E63946]"
+            style={{ fontFamily: 'Bangers, system-ui' }}
           >
             Hello <span className="animate-wave ml-3 inline-block">👋</span>
           </motion.h1>
@@ -40,10 +41,14 @@ const Intro = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, delay: 0.3 }}
-            className="text-2xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-600 to-blue-700"
+            className="text-3xl md:text-5xl font-bold"
+            style={{ fontFamily: 'Bangers, system-ui' }}
           >
-            <span className="mr-2">I am {text}</span>
-            <Cursor cursorColor="#7C3AED" />
+            <span className="mr-4 text-red-600 drop-shadow-md tracking-wide">I am</span>
+            <span className="text-white drop-shadow-[2px_2px_0_#E63946]">
+              {text}
+            </span>
+            <Cursor cursorColor="#E63946" />
           </motion.div>
         </div>
       </div>

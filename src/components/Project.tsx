@@ -112,7 +112,7 @@ const projects: Project[] = [
 
 const Project = () => {
   const linkClass =
-    "inline-flex items-center gap-2 text-blue-400 hover:text-blue-600 transition";
+    "inline-flex items-center gap-2 text-white group-hover:text-red-500 transition font-bold tracking-wide transition-colors duration-300";
 
   return (
     <div
@@ -120,7 +120,10 @@ const Project = () => {
       className="min-h-screen bg-transparent text-white p-8 pt-20"
       style={{ scrollMarginTop: "10rem" }}
     >
-      <h1 className="text-4xl font-bold mb-8 text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600">
+      <h1
+        className="text-5xl font-bold mb-12 text-center text-white drop-shadow-[4px_4px_0_#E63946]"
+        style={{ fontFamily: 'Bangers, system-ui' }}
+      >
         My Projects
       </h1>
 
@@ -129,23 +132,28 @@ const Project = () => {
           ({ title, description, technologies, githubUrl }, index) => (
             <motion.div
               key={title}
-              className="bg-black bg-opacity-60 backdrop-blur-sm rounded-xl shadow-xl p-6 flex flex-col justify-between border border-gray-800 hover:border-blue-500/50 transition-all hover:bg-opacity-80"
+              className="bg-black/90 backdrop-blur-sm rounded-xl shadow-xl p-6 flex flex-col justify-between border-2 border-gray-800 transition-all hover:bg-black group"
+              whileHover={{
+                scale: 1.02,
+                borderColor: "#E63946",
+                boxShadow: "0 0 15px rgba(229, 9, 20, 0.4)"
+              }}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
               <div>
-                <h2 className="text-2xl font-semibold mb-2">{title}</h2>
-                <p className="mb-4 text-gray-300 line-clamp-4">{description}</p>
+                <h2 className="text-2xl font-bold mb-2 text-red-500 font-bangers tracking-wide">{title}</h2>
+                <p className="mb-4 text-gray-300 line-clamp-4 font-roboto-mono text-sm">{description}</p>
 
                 <div className="mb-4">
-                  <h3 className="font-semibold mb-1">Technologies Used:</h3>
+                  <h3 className="font-semibold mb-2 text-white">Technologies Used:</h3>
                   <ul className="flex flex-wrap gap-2">
                     {technologies.map((tech) => (
                       <li
                         key={tech}
-                        className="bg-blue-600 text-white rounded-full px-3 py-1 text-sm"
+                        className="bg-gray-800 text-white border border-red-900/30 rounded-full px-3 py-1 text-xs font-bold uppercase tracking-wider"
                       >
                         {tech}
                       </li>
@@ -154,7 +162,7 @@ const Project = () => {
                 </div>
               </div>
 
-              <div className="flex items-center gap-4 mt-4">
+              <div className="flex items-center gap-4 mt-4 pt-4 border-t border-gray-800">
 
                 {title === "Medipal" && (
                   <a

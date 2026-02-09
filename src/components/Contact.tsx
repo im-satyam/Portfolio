@@ -50,15 +50,16 @@ const Contact = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="w-full max-w-xl bg-black bg-opacity-60 backdrop-blur-sm rounded-xl p-8 shadow-xl border border-gray-800"
+          className="w-full max-w-xl bg-black/90 backdrop-blur-md rounded-xl p-8 shadow-[0_0_20px_rgba(229,9,20,0.3)] border-2 border-red-900/50"
         >
           <motion.h1
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2, duration: 0.5 }}
-            className="text-3xl font-bold text-center mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600"
+            className="text-4xl font-bold text-center mb-6 text-white drop-shadow-[3px_3px_0_#E63946]"
+            style={{ fontFamily: 'Bangers, system-ui' }}
           >
-            Contact Me
+            Get In Touch
           </motion.h1>
 
           <form ref={formRef} onSubmit={sendEmail} className="space-y-4">
@@ -113,11 +114,11 @@ const Contact = () => {
               whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 300 }}
               disabled={loading}
-              className={`w-full bg-black bg-opacity-60 backdrop-blur-sm border border-gray-800 text-white font-bold py-3 rounded-xl hover:bg-opacity-80 hover:border-blue-500/50 hover:shadow-[0_0_15px_rgba(59,130,246,0.3)] transition-all flex items-center justify-center gap-2 ${loading ? "opacity-70 cursor-not-allowed" : ""
+              className={`w-full bg-red-700 bg-opacity-90 text-white font-bold py-3 rounded-xl hover:bg-red-600 shadow-lg hover:shadow-[0_0_20px_rgba(229,9,20,0.5)] transition-all flex items-center justify-center gap-2 font-bangers tracking-wider text-xl ${loading ? "opacity-70 cursor-not-allowed" : ""
                 }`}
             >
               {loading ? (
-                <span className="animate-pulse">Sending...</span>
+                <span className="animate-pulse">Sending Web...</span>
               ) : (
                 "Send Message"
               )}
@@ -127,9 +128,9 @@ const Contact = () => {
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="mt-4 p-3 rounded-lg bg-green-500 bg-opacity-20 border border-green-500/50 text-green-200 text-center"
+                className="mt-4 p-3 rounded-lg bg-green-500/20 border border-green-500/50 text-green-200 text-center font-roboto-mono"
               >
-                ✅ Your message has been sent successfully!
+                ✅ Your web has been sent successfully!
               </motion.div>
             )}
 
@@ -137,7 +138,7 @@ const Contact = () => {
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="mt-4 p-3 rounded-lg bg-red-500 bg-opacity-20 border border-red-500/50 text-red-200 text-center text-sm"
+                className="mt-4 p-3 rounded-lg bg-red-500/20 border border-red-500/50 text-red-200 text-center text-sm font-roboto-mono"
               >
                 ❌ {errorMessage}
               </motion.div>
