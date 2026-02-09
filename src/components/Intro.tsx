@@ -14,9 +14,9 @@ const Intro = () => {
       className="w-full min-h-screen py-20 pb-32 px-4 sm:px-8 relative flex items-center justify-center bg-transparent"
     >
 
-      {/* Centered Content */}
+
       <div className="relative z-10 flex flex-col md:flex-row items-center justify-center gap-8 max-w-6xl mx-auto text-center md:text-left">
-        {/* Image */}
+
         <div className="w-40 h-40 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-red-600 shadow-[0_0_20px_rgba(229,9,20,0.6)]">
           <img
             src="/photo.jpeg"
@@ -25,7 +25,7 @@ const Intro = () => {
           />
         </div>
 
-        {/* Text */}
+
         <div className="space-y-4">
           <motion.h1
             initial={{ opacity: 0, y: -10 }}
@@ -34,7 +34,7 @@ const Intro = () => {
             className="text-white text-5xl md:text-7xl font-bold font-bangers tracking-wide drop-shadow-[2px_2px_0_#E63946]"
             style={{ fontFamily: 'Bangers, system-ui' }}
           >
-            Hello <span className="animate-wave ml-3 inline-block">👋</span>
+            I'm <span className="glitch inline-block" data-text="Satyam Kumar">Satyam Kumar</span> <span className="animate-wave ml-3 inline-block">👋</span>
           </motion.h1>
 
           <motion.div
@@ -53,7 +53,7 @@ const Intro = () => {
         </div>
       </div>
 
-      {/* Wave animation */}
+
       <style>{`
         @keyframes wave {
           0% { transform: rotate(0deg); }
@@ -74,7 +74,7 @@ const Intro = () => {
         }
       `}</style>
 
-      {/* Scroll Down Indicator */}
+
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}

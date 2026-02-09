@@ -112,7 +112,7 @@ const projects: Project[] = [
 
 const Project = () => {
   const linkClass =
-    "inline-flex items-center gap-2 text-white group-hover:text-red-500 transition font-bold tracking-wide transition-colors duration-300";
+    "inline-flex items-center gap-2 text-white group-hover:text-red-500 transition font-bold tracking-wide transition-colors duration-300 relative group/link";
 
   return (
     <div
@@ -174,6 +174,7 @@ const Project = () => {
                   >
                     <FaGlobe size={22} />
                     <span>Demo</span>
+                    <span className="absolute left-0 bottom-0 h-0.5 w-0 bg-red-600 transition-all duration-300 group-hover/link:w-full shadow-[0_0_10px_#E63946]"></span>
                   </a>
                 )}
 
@@ -188,6 +189,7 @@ const Project = () => {
                   >
                     <FaGlobe size={22} />
                     <span>Demo</span>
+                    <span className="absolute left-0 bottom-0 h-0.5 w-0 bg-red-600 transition-all duration-300 group-hover/link:w-full shadow-[0_0_10px_#E63946]"></span>
                   </a>
                 )}
 
@@ -201,6 +203,7 @@ const Project = () => {
                 >
                   <FaGithub size={20} />
                   <span>View Source</span>
+                  <span className="absolute left-0 bottom-0 h-0.5 w-0 bg-red-600 transition-all duration-300 group-hover/link:w-full shadow-[0_0_10px_#E63946]"></span>
                 </a>
               </div>
             </motion.div>
