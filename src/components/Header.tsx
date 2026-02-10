@@ -26,8 +26,9 @@ const Header = () => {
         </button>
       </div>
 
-      <div className="flex items-center">
-        <span className="text-2xl text-red-600 font-bangers tracking-wider drop-shadow-[2px_2px_0_#991B1B]" style={{ fontFamily: 'Bangers, system-ui' }}>SPIDER-DEV</span>
+      <div className="flex items-center gap-2">
+        <img src="/logo.png" alt="Logo" className="h-10 w-10 object-contain drop-shadow-[0_0_5px_rgba(229,9,20,0.8)]" />
+        <span className="text-2xl text-red-600 font-bangers tracking-wider drop-shadow-[2px_2px_0_#991B1B]" style={{ fontFamily: 'Bangers, system-ui' }}>Satyam Kumar</span>
       </div>
 
 
@@ -49,14 +50,14 @@ const Header = () => {
 
 
       <div className="flex items-center space-x-6">
-        {/* Resume Button */}
+
         <a
           href="/SatyamResume.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="hidden md:block px-4 py-2 bg-red-600/10 border border-red-500 text-red-500 font-bold rounded hover:bg-red-600 hover:text-white transition-all duration-300 shadow-[0_0_10px_rgba(229,9,20,0.2)] hover:shadow-[0_0_20px_rgba(229,9,20,0.6)] font-mono tracking-widest text-sm"
         >
-          MISSION REPORT
+          Resume
         </a>
 
         <div className="flex items-center space-x-4">
@@ -98,7 +99,6 @@ const Header = () => {
                 </a>
               </li>
             ))}
-            {/* Mobile Resume Link */}
             <li>
               <a
                 href="/SatyamResume.pdf"
@@ -107,7 +107,7 @@ const Header = () => {
                 className="block text-red-500 font-bold tracking-widest border border-red-500 p-2 text-center rounded bg-red-900/10"
                 onClick={() => setMenuOpen(false)}
               >
-                MISSION REPORT
+                Resume
               </a>
             </li>
           </ul>

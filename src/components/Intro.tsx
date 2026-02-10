@@ -31,11 +31,14 @@ const Intro = () => {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="text-white text-5xl md:text-7xl font-bold font-bangers tracking-wide drop-shadow-[2px_2px_0_#E63946]"
+            className="text-white text-5xl md:text-7xl font-bold font-bangers tracking-wide"
             style={{ fontFamily: 'Bangers, system-ui' }}
           >
-            Hello <span className="animate-wave ml-3 inline-block">👋</span> <br />
-            I'm <span className="glitch inline-block" data-text="Satyam Kumar">Satyam Kumar</span>
+            <span className="drop-shadow-[2px_2px_0_#E63946]">
+              Hello <span className="animate-wave ml-3 inline-block">👋</span> <br />
+              I'm
+            </span>
+            <span className="inline-block text-red-600 drop-shadow-md tracking-wide ml-2">Satyam Kumar</span>
           </motion.h1>
 
           <motion.div

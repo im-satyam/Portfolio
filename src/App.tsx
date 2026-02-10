@@ -11,8 +11,6 @@ import Preloader from './components/Preloader'
 import Achievements from './components/Achievements'
 import "./index.css"
 
-import CustomCursor from './components/CustomCursor'
-
 function App() {
   const [loading, setLoading] = useState(true);
 
@@ -26,7 +24,6 @@ function App() {
 
   return (
     <>
-      <CustomCursor />
       {loading && <Preloader />}
       <div className="fixed inset-0 z-[-1] overflow-hidden">
         <video
@@ -57,11 +54,9 @@ function App() {
       </div>
 
       <div id="projects">
-
         <Project />
       </div>
       <div id="contact">
-
         <Contact />
       </div>
       <Footer />
