@@ -41,9 +41,9 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="relative min-h-screen w-full bg-transparent pt-20"
+      className="relative w-full bg-transparent py-12"
     >
-      {/* Contact content */}
+
       <div className="relative z-10 flex items-center justify-center p-8">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -74,7 +74,7 @@ const Contact = () => {
                 name="user_name"
                 required
                 className="w-full p-2 rounded bg-gray-800 text-white border border-gray-700 focus:outline-none focus:border-purple-500 transition-colors"
-                placeholder="John Doe"
+                placeholder="Your name"
               />
             </motion.div>
 
@@ -89,7 +89,7 @@ const Contact = () => {
                 name="user_email"
                 required
                 className="w-full p-2 rounded bg-gray-800 text-white border border-gray-700 focus:outline-none focus:border-purple-500 transition-colors"
-                placeholder="john@example.com"
+                placeholder="your@email.com"
               />
             </motion.div>
 

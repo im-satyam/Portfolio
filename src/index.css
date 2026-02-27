@@ -61,6 +61,17 @@ html {
   /* cursor: none; Removed to restore default cursor */
 }
 
+/* Offset scroll target for fixed navbar (h-16 = 64px) */
+#home,
+#about,
+#skills,
+#achievements,
+#projects,
+#contact {
+  scroll-margin-top: 4rem;
+}
+
+
 /* Glitch Effect */
 .glitch {
   position: relative;

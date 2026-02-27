@@ -11,13 +11,13 @@ const Intro = () => {
   return (
     <section
       id="home"
-      className="w-full min-h-screen py-20 pb-32 px-4 sm:px-8 relative flex items-center justify-center bg-transparent"
+      className="w-full py-10 pb-12 px-4 sm:px-8 relative flex items-center justify-center bg-transparent"
     >
 
 
       <div className="relative z-10 flex flex-col md:flex-row items-center justify-center gap-8 max-w-6xl mx-auto text-center md:text-left">
 
-        <div className="w-40 h-40 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-red-600 shadow-[0_0_20px_rgba(229,9,20,0.6)]">
+        <div className="w-32 h-32 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-red-600 shadow-[0_0_20px_rgba(229,9,20,0.6)]">
           <img
             src="/photo.jpeg"
             alt="Intro"
@@ -31,7 +31,7 @@ const Intro = () => {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="text-white text-5xl md:text-7xl font-bold font-bangers tracking-wide"
+            className="text-white text-4xl md:text-6xl font-bold font-bangers tracking-wide"
             style={{ fontFamily: 'Bangers, system-ui' }}
           >
             <span className="drop-shadow-[2px_2px_0_#E63946]">
@@ -45,7 +45,7 @@ const Intro = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, delay: 0.3 }}
-            className="text-3xl md:text-5xl font-bold"
+            className="text-2xl md:text-4xl font-bold"
             style={{ fontFamily: 'Bangers, system-ui' }}
           >
             <span className="mr-4 text-red-600 drop-shadow-md tracking-wide">I am</span>
@@ -79,33 +79,7 @@ const Intro = () => {
       `}</style>
 
 
-      <motion.div
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 2, duration: 1 }}
-        className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
-      >
-        <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-          className="text-gray-400"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-8 w-8"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M19 14l-7 7m0 0l-7-7m7 7V3"
-            />
-          </svg>
-        </motion.div>
-      </motion.div>
+
     </section>
   );
 };

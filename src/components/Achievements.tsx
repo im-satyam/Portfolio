@@ -41,7 +41,7 @@ const Achievements = () => {
     return (
         <section
             id="achievements"
-            className="relative w-full min-h-screen flex items-center justify-center py-12 px-4 sm:px-8 bg-transparent"
+            className="relative w-full flex items-center justify-center py-12 px-4 sm:px-8 bg-transparent"
         >
             <div className="relative z-10 max-w-7xl mx-auto text-center px-4 w-full">
                 <motion.h2

@@ -4,9 +4,9 @@ const About = () => {
   return (
     <section
       id="about"
-      className="w-full min-h-screen py-20 px-4 sm:px-8 relative bg-transparent flex items-center justify-center"
+      className="w-full py-8 px-4 sm:px-8 relative bg-transparent flex items-center justify-center"
     >
-      <div className="relative z-10 max-w-4xl mx-auto text-center">
+      <div className="relative z-10 max-w-6xl w-full mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -37,10 +37,10 @@ const About = () => {
               I’m a developer who enjoys building web applications and figuring out how things work behind the scenes. Most of my time goes into working on full-stack projects using <strong className="text-red-500">JavaScript</strong> and <strong className="text-red-500">Python</strong>, and I practice data structures and algorithms in <strong className="text-red-500">C++</strong> to keep improving my problem-solving skills.
             </p>
             <p>
-              I like learning by building. I’ve worked on a few full-stack and backend projects where I handled things like authentication, APIs, and connecting the frontend to real data. I’ve also started integrating AI models through the backend in some of my projects, where user inputs are sent to an AI service and the results are processed and shown in the app. It’s something I enjoy exploring because it combines backend logic with real user features.
+              I build full-stack and backend projects — handling authentication, REST APIs, and real data pipelines. I've integrated AI models into production features, routing user inputs through backend services and surfacing the results cleanly in the UI.
             </p>
             <p>
-              I regularly practice DSA and competitive programming — I’m a 2<span className="text-red-500 font-bold">★</span> CodeChef coder and have solved 170+ LeetCode problems across different topics. It’s something I do consistently because it helps me think more clearly and write better code.
+              I regularly practice DSA and competitive programming — I'm a 2<span className="text-red-500 font-bold">★</span> <strong className="text-red-500">CodeChef</strong> coder and have solved 170+ <strong className="text-red-500">LeetCode</strong> problems across different topics. It's something I do consistently because it helps me think more clearly and write better code.
             </p>
           </motion.div>
         </motion.div>

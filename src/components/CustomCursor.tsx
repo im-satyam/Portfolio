@@ -12,7 +12,6 @@ const CustomCursor = () => {
 
         const handleMouseOver = (e: MouseEvent) => {
             const target = e.target as HTMLElement;
-            // check if target is clickable
             if (
                 target.tagName === "A" ||
                 target.tagName === "BUTTON" ||
@@ -37,7 +36,7 @@ const CustomCursor = () => {
 
     return (
         <>
-            {/* Main Dot */}
+           
             <motion.div
                 className="fixed top-0 left-0 w-4 h-4 bg-red-600 rounded-full pointer-events-none z-[9999] mix-blend-difference"
                 animate={{
@@ -48,7 +47,7 @@ const CustomCursor = () => {
                 transition={{ type: "spring", stiffness: 500, damping: 28 }}
             />
 
-            {/* Outer Ring / Crosshair */}
+            
             <motion.div
                 className="fixed top-0 left-0 w-8 h-8 border border-red-500 rounded-full pointer-events-none z-[9999]"
                 animate={{
@@ -59,7 +58,7 @@ const CustomCursor = () => {
                 }}
                 transition={{ type: "spring", stiffness: 250, damping: 20 }}
             >
-                {/* Crosshair Lines */}
+                
                 <div className="absolute top-1/2 left-[-4px] w-[6px] h-[1px] bg-red-500"></div>
                 <div className="absolute top-1/2 right-[-4px] w-[6px] h-[1px] bg-red-500"></div>
                 <div className="absolute left-1/2 top-[-4px] w-[1px] h-[6px] bg-red-500"></div>

@@ -104,7 +104,7 @@ const Project = () => {
   return (
     <div
       id="projects"
-      className="min-h-screen bg-transparent text-white p-8 pt-20"
+      className="bg-transparent text-white p-8 py-12"
       style={{ scrollMarginTop: "10rem" }}
     >
       <h1

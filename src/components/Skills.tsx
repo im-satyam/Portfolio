@@ -25,32 +25,32 @@ import {
 } from "react-icons/si";
 
 const skills = [
-  // Languages
+
   { name: "C++", icon: <SiCplusplus className="text-blue-300" /> },
   { name: "Python", icon: <FaPython className="text-yellow-500" /> },
   { name: "TypeScript", icon: <SiTypescript className="text-blue-500" /> },
   { name: "Golang", icon: <SiGoland className="text-cyan-500" /> },
 
-  // Frontend
+
   { name: "React.js", icon: <FaReact className="text-blue-400" /> },
   { name: "Next.js", icon: <SiNextdotjs className="text-white" /> },
   { name: "Tailwind CSS", icon: <SiTailwindcss className="text-cyan-400" /> },
   { name: "Chrome Ext", icon: <FaChrome className="text-yellow-400" /> },
 
-  // Backend
+
   { name: "Node.js", icon: <FaNodeJs className="text-green-500" /> },
   { name: "Express.js", icon: <SiExpress className="text-gray-300" /> },
   { name: "Flask", icon: <SiFlask className="text-gray-300" /> },
   { name: "Django", icon: <SiDjango className="text-green-700" /> },
   { name: "Prisma ORM", icon: <SiPrisma className="text-white" /> },
 
-  // Databases
+
   { name: "MongoDB", icon: <SiMongodb className="text-green-600" /> },
   { name: "MySQL", icon: <SiMysql className="text-blue-600" /> },
   { name: "SQLite", icon: <SiSqlite className="text-blue-400" /> },
   { name: "Firebase", icon: <SiFirebase className="text-yellow-400" /> },
 
-  // DevOps & Tools
+
   { name: "Docker", icon: <SiDocker className="text-blue-400" /> },
   { name: "Git", icon: <FaGitAlt className="text-orange-500" /> },
   { name: "GitHub", icon: <FaGithub className="text-white" /> },
@@ -60,10 +60,10 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="relative w-full py-20 px-4 sm:px-8 bg-transparent"
+      className="relative w-full py-12 px-4 sm:px-8 bg-transparent"
     >
 
-      {/* Content */}
+
       <div className="relative z-10 max-w-6xl mx-auto text-center px-4">
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
