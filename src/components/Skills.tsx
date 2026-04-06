@@ -18,6 +18,7 @@ import {
   SiTailwindcss,
   SiTypescript,
   SiDocker,
+  SiJenkins,
   SiFlask,
   SiDjango,
   SiPrisma,
@@ -52,6 +53,7 @@ const skills = [
 
 
   { name: "Docker", icon: <SiDocker className="text-blue-400" /> },
+  { name: "Jenkins", icon: <SiJenkins className="text-red-400" /> },
   { name: "Git", icon: <FaGitAlt className="text-orange-500" /> },
   { name: "GitHub", icon: <FaGithub className="text-white" /> },
 ];
